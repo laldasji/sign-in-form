@@ -1,0 +1,209 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url('resources/PlayfairDisplay-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: InterTight;
+    src: url('resources/InterTight-VariableFont_wght.ttf');
+}
+
+:root
+{
+    --valid-color: rgb(0, 255, 0);
+    --invalid-color: rgb(255, 0, 0);
+}
+
+body
+{
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    height: 100svh;
+    width: 100svw;
+}
+
+#backgroundImage
+{
+    width: calc(33%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.1), black), url('resources/cool-background-image.jpeg');
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+h1
+{
+    align-self: center;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#formArea
+{
+    font-family: InterTight;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    width: calc(67%);
+    color: white;
+}
+
+form
+{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(1rem + 0.25vw);
+    width: calc(90%);
+    margin: 2%;
+    font-family: Playfair;
+    line-height: calc(2em);
+}
+
+fieldset
+{
+    backdrop-filter: blur(2.5px);
+    margin-bottom: 5%;
+    border-radius: 1em;
+    width: calc(98%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label
+{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    text-wrap: nowrap;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=password]
+{
+    border-radius: 0.25em;
+    border-width: 0.2em;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+input[type=text], input[type=email], input[type=tel] {
+    &:invalid:not(:placeholder-shown)
+    {
+        border-color: red;
+    }
+}
+
+input[type=text], input[type=email], input[type=tel] {
+    &:valid:not(:placeholder-shown)
+    {
+        border-color: green;
+    }
+}
+
+.infoContainer
+{
+    width: calc(48%);
+    display: flex;
+    align-items: center;
+    margin: 0.5%;
+}
+
+label[for='creditCardCVV'], label[for='creditCardExpiry']
+{
+    width: max(30%, fit-content);
+}
+
+.infoContainer > input
+{
+    margin-left: calc(1% + 0.5vw);
+    height: 1em;
+    font-size: 0.9em;
+    width: calc(60% + 2vw);
+}
+
+#creditCardCVV, #creditCardExpiry
+{
+    width: 10ch;
+}
+
+select
+{
+    margin-left: calc(1% + 0.5vw);
+    font-size: 0.9em;
+}
+    
+#submit
+{
+    align-self: center;
+    position: relative;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    transition-duration: 0.75s;
+}
+
+#submit:hover
+{
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 0.1em black;
+    transition-duration: 1s;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    body
+    {
+        background-image: url(resources/cool-background-image.jpeg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    body::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, black, rgba(255,255,255, 0.1), black); /* Adjust opacity here (0.5 is 50% opaque) */
+        z-index: -1;
+    }
+    #backgroundImage
+    {
+        display: none;
+    }
+    #formArea
+    {
+        width: calc(100%);
+    }
+    .infoContainer
+    {
+        width: 48%;
+    }
+    .infoContainer > input
+    {
+        height: 1em;
+        width: calc(80%);
+    }
+}
+
+@media (max-aspect-ratio: 3/4)
+{
+    .infoContainer
+    {
+        width: calc(95%);
+    }
+}
