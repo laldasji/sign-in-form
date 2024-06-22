@@ -17,20 +17,23 @@
             NOT a scam site,
             <br>
             Just give me your money.
-        </h1>
-            <form>
+            <br>
+        </h1>    
+        <form>
+                Fields marked with * are required
+                <br>
                 <fieldset>
                     <legend>Personal Details</legend>
 
                         <div class="infoContainer">
-                            <label for="firstName">First Name: </label>
+                            <label for="firstName">First Name *: </label>
                             <input type="text" id="firstName" minlength="3" maxlength="35"
                             placeholder=""
                             required>
                         </div>
 
                         <div class="infoContainer">
-                            <label for="lastName">Surname: </label>
+                            <label for="lastName">Surname *: </label>
                             <input type="text" id="lastName" minlength="3" maxlength="35"
                             placeholder=""
                             required>
@@ -42,13 +45,13 @@
                         </div>
 
                         <div class="infoContainer">
-                            <label for="dateOfBirth">Date of Birth: </label>
+                            <label for="dateOfBirth">Date of Birth *: </label>
                             <input type="date" id="dateOfBirth" min="1900-01-01" max="2024-06-21"
                             required>
                         </div>
 
                         <div class="infoContainer">
-                            <label for="phoneNo">Phone No.: </label>
+                            <label for="phoneNo">Phone No. *: </label>
                             <input type="tel" id="phoneNo" autocomplete="off"
                             pattern="(\+[\d]{1,3}[\- ]?)?[\d]{10}"
                             maxlength="15"
@@ -61,7 +64,7 @@
                     <legend>Financial Details</legend>
 
                     <div class="infoContainer">
-                        <label for="creditCard">Credit Card: </label>
+                        <label for="creditCard">Credit Card *: </label>
                         <input type="text" id="creditCard" autocomplete="off"
                         pattern="[\d]{4}([\- ]?[\d]{4}){3}([\- ]?[\d]{3})?"
                         maxlength="23"
@@ -70,7 +73,7 @@
                     </div>
 
                     <div class="infoContainer">
-                        <label for="creditCardCVV">CVV: </label>
+                        <label for="creditCardCVV">CVV *: </label>
                         <input type="password" id="creditCardCVV" maxlength="4"
                         pattern="[\d]{3,4}"
                         required
@@ -78,7 +81,7 @@
                     </div>
 
                     <div class="infoContainer">
-                        <label>Expiry Date: </label>
+                        <label>Expiry Date *: </label>
                         <select name="month" id="CCmonth" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
