@@ -45,20 +45,14 @@ body
 
 h1
 {
-    font-family: InterTight;
     align-self: center;
     text-align: center;
     font-size: 3rem;
 }
 
-sub
-{
-    font-size: 40%;
-    text-align: left;
-}
-
 #formArea
 {
+    font-family: InterTight;
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -211,5 +205,9 @@ select
     .infoContainer
     {
         width: calc(95%);
+    }
+    :root
+    {
+        font-size: 3vw;
     }
 }
