@@ -32,7 +32,8 @@ body
 #backgroundImage
 {
     width: calc(33%);
-    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.1), black), url('resources/cool-background-image.jpeg') no-repeat center;
+    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.1), black), url('resources/cool-background-image.jpg') no-repeat center;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     display: flex;
@@ -73,7 +74,8 @@ form
 fieldset
 {
     backdrop-filter: blur(2.5px);
-    border-radius: 1em;
+    margin-bottom: 1em;
+    border-radius: 1rem;
     width: calc(98%);
     display: flex;
     flex-wrap: wrap;
@@ -102,13 +104,11 @@ input:focus
 input[type=text], input[type=email], input[type=tel], input[type=date] {
     &:invalid:not(:placeholder-shown)
     {
-        border-color: red;
-        border-style: solid;
+        border: solid red;
     }
     &:valid:not(:placeholder-shown)
     {
-        border-color: green;
-        border-style: solid;
+        border: solid green;
     }
 }
 
@@ -126,12 +126,7 @@ input[type=text], input[type=email], input[type=tel], input[type=date] {
     right: 0;
     font-size: 1em;
     width: calc(90%);
-}
-
-label[for='creditCardCVV'], label[for='creditCardExpiry']
-{
-    width: fit-content;
-    font-size: calc(1em - 1%) ;
+    border: solid grey;
 }
 
 #creditCardCVV, #creditCardExpiry
@@ -167,7 +162,7 @@ select
 {
     body
     {
-        background-image: url(resources/cool-background-image.jpeg);
+        background-image: url(resources/cool-background-image.jpg);
         background-position: center;
         background-size:cover;
         background-repeat: no-repeat;
