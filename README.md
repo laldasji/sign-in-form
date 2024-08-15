@@ -2,7 +2,7 @@
 
 ## A sign-in form created following the curriculum of [The Odin Project](https://www.theodinproject.com/) using HTML, CSS and JavaScript
 
-## You can check out the project [here!](https://laldasji.github.io/sign-in-form/)
+### You can check out the project [here!](https://laldasji.github.io/sign-in-form/)
 
 ## Features
 - **Input Validation with Regular Expressions:** Implemented robust input validation using regular expressions to ensure data correctness
