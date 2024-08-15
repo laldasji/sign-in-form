@@ -5,7 +5,7 @@
 ## You can check out the project [here!](https://laldasji.github.io/sign-in-form/)
 
 ## Features
-- **Input Validation with Regular Expressions:** Implemented robust input validation using regular expressions to ensure data correctness 
+- **Input Validation with Regular Expressions:** Implemented robust input validation using regular expressions to ensure data correctness
 - **Flexible Expressions:** Regular expressions for checking correctness acount for the variation in the way the information is added. For example:
     - valid expressions for mobile number would include:
         - +91 99999 99999
@@ -16,6 +16,7 @@
         - 1234123412341234
         - 1234 1234 1234 1234
 - **Custom Error Messages:** Developed custom error messages for any mismatch in the format of input entered by the users
+- **Mobile First Design:** Developed with a focus on mobile compatibility and responsiveness to accommodate various screen sizes and aspect ratios
 
 ## Suggestions
 If you have any suggestions, please write to me at abhinavashutoshlaldas@gmail.com
